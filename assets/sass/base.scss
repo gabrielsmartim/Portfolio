@@ -1,0 +1,335 @@
+$background: #000;
+$secondary: #282830;
+$basetext: #fff;
+$titles:#ff0022;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+  
+
+body {
+    background-color: #000;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+header {
+    .logo {
+        padding: 40px;
+    }
+}
+
+main {
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        z-index: -100;
+        
+    }
+
+    .overlay {
+        background: rgba(61, 0, 11, 0.589);
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        top: 0;
+        z-index: -99;
+    }
+}
+
+.main-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+        
+        span {
+            font-size: 36px;
+            color: $basetext;
+            letter-spacing: 5px;        
+        }
+    
+        h2 {
+            margin: 5px 0 ;
+            font-size:48px;
+            color: $titles;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+    
+        button {
+            width: 300px;
+            height: 60px;
+            background-color: transparent;
+            border: 3px solid $titles;
+            border-radius: 30px;
+            font-size: 16px;
+            color: $basetext;
+            margin-top: 40px;
+            cursor: pointer;
+            transition: .6s;
+    
+            &:hover {
+                background-color: #ff0022;
+            }
+        }    
+    
+        .arrow img{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            margin: 50px 140px;
+            animation: bounce 0.6s infinite;
+            cursor: pointer;
+        }
+    
+        @keyframes bounce {
+            0% {top: 0px;}
+            50% {top: 5px;}
+            100% {top: 0px;}
+        }
+}
+
+article {
+box-shadow: 0px -70px 20px rgba(0, 0, 0, 0.95);
+
+
+.about-area {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    box-sizing: border-box;
+    
+        .about1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+            h3 {
+                margin: 0;
+                margin-left: 10px;
+                font-size: 22px;
+                color: $basetext;
+                font-weight: 400;
+                width: 500px;
+                span {
+                    color: $titles;
+                    font-weight: 700;
+                }
+            }
+        }
+    
+        .about2 {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+    
+            span {
+                color: $titles;
+            }
+        
+            h3 {
+                margin: 0;
+                margin-right: 10px;
+                font-size: 22px;
+                color: $basetext;
+                font-weight: 400;
+                width: 500px;
+                text-align: end;
+                span {
+                    color: $titles;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    
+}
+
+section {
+display: flex;
+
+
+    .left {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        height: 350px;
+        background-color: $secondary;
+
+        .left-text {
+            width: 280px;
+            margin-right: 150px;
+            
+            .left-title {
+                font-size: 36px;
+                color: $basetext;
+            }
+
+            .left-desc {
+                font-size: 16px;
+                color: $basetext;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        height: 350px;
+        background-color: $titles;
+        .right-text {
+            width: 280px;
+            margin-left: 150px;
+
+            .right-title {
+                font-size: 36px;
+                color: $basetext;
+            }
+
+            .right-desc {
+                font-size: 16px;
+                color: $basetext;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+section {
+.title {
+    font-size: 28px;
+    color: $basetext;
+    text-align: center;
+    margin: 70px 0;
+}
+.stack-area {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    .stack1, .stack2 {
+        display: flex;
+    }
+
+    .stack1 {
+        .stack1-text {
+            margin: -18px 0 0 10px;
+        }
+    
+        
+        .stack-title {
+            color: $titles;
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 45px;
+        }
+        .stack-desc {
+            color: $basetext;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .stack2 {
+        text-align: end;
+        .stack2-text {
+            margin: -18px 10px 0 0;
+        }
+    
+        
+        .stack-title {
+            color: $titles;
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 45px;
+        }
+        .stack-desc {
+            color: $basetext;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+}
+
+section {
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .linkedin, .git, .email, .wp {
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: transparent;
+        border: 3px solid $titles;
+        transition: 0.6s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $titles;
+        }
+    }
+}
+}
+
+.footer-line {
+    width: 90%;
+    height: 2px;
+    background-color: $secondary;
+    margin: 50px auto 0 auto;
+}
+
+footer {
+    display: flex;
+    color: #777;
+
+    .footer-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        
+
+        .powered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin: 10px;
+        }
+    }
+}
+
