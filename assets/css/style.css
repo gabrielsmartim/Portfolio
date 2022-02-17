@@ -10,7 +10,8 @@ body {
 }
 
 .container {
-  width: 1200px;
+  box-sizing: border-box;
+  max-width: 1200px;
   margin: auto;
   padding: 50px 30px;
 }
@@ -202,6 +203,7 @@ section .stack-area {
 }
 section .stack-area .stack1, section .stack-area .stack2 {
   display: flex;
+  margin: 0 100px;
 }
 section .stack-area .stack1 .stack1-text {
   margin: -18px 0 0 10px;
@@ -282,4 +284,22 @@ footer .footer-area img {
   width: 25px;
   height: 25px;
   margin: 10px;
+}
+
+.main-area p {
+  margin: 0;
+  display: inline-block;
+  animation: blink 0.6s infinite;
+  color: #ff0022;
+}
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }

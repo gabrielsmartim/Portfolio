@@ -17,7 +17,8 @@ body {
 }
 
 .container {
-    width: 1200px;
+    box-sizing: border-box;
+    max-width: 1200px;
     margin: auto;
     padding: 50px 30px;
 }
@@ -233,6 +234,7 @@ section {
     
     .stack1, .stack2 {
         display: flex;
+        margin: 0 100px;
     }
 
     .stack1 {
@@ -332,4 +334,23 @@ footer {
         }
     }
 }
+
+.main-area {
+    p {
+        margin: 0;
+        display: inline-block;
+        animation: blink 0.6s infinite;
+        color: $titles;
+    }
+
+    @keyframes blink {
+        0% {opacity: 100%;}
+        50% {opacity: 0%;}
+        100% {opacity: 100%;}
+    }
+}
+
+
+// RESPONSIVE 
+
 
