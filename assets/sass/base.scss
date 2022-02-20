@@ -14,6 +14,7 @@ body {
     background-color: #000;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    overflow-x:hidden;    
 }
 
 .container {
@@ -21,6 +22,12 @@ body {
     max-width: 1200px;
     margin: auto;
     padding: 50px 30px;
+    @media (max-width: 400px) {
+        padding: 50px 15px;
+    }
+    @media (max-width: 340px) {
+        padding: 50px 0;
+    }
 }
 
 header {
@@ -56,11 +63,23 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: 150px;
+    @media (max-width: 340px) {
+        padding-left: 10px;
+    }
         
         span {
             font-size: 36px;
             color: $basetext;
             letter-spacing: 5px;        
+            @media (max-width: 600px) {
+                font-size: 28px;
+            }
+            @media (max-width: 505px) {
+                font-size: 22px;
+            }
+            @media (max-width: 350px) {
+                font-size: 16px;
+            }
         }
     
         h2 {
@@ -69,6 +88,12 @@ main {
             color: $titles;
             font-weight: 700;
             letter-spacing: 3px;
+            @media (max-width: 600px) {
+                font-size: 40px;
+            }
+            @media (max-width: 350px) {
+                font-size: 36px;
+            }
         }
     
         button {
@@ -82,6 +107,9 @@ main {
             margin-top: 40px;
             cursor: pointer;
             transition: .6s;
+            @media (max-width: 350px) {
+                width: 280px;
+            }
     
             &:hover {
                 background-color: #ff0022;
@@ -105,7 +133,7 @@ main {
 }
 
 article {
-box-shadow: 0px -70px 20px rgba(0, 0, 0, 0.95);
+box-shadow: 0px -70px 10px rgba(0, 0, 0, 0.95);
 
 
 .about-area {
@@ -117,11 +145,21 @@ box-shadow: 0px -70px 20px rgba(0, 0, 0, 0.95);
     align-items: center;
     padding: 0 100px;
     box-sizing: border-box;
+    @media (max-width: 650px) {
+        padding: 20px;
+    }
     
         .about1 {
         width: 100%;
         display: flex;
         align-items: center;
+        @media (max-width: 680px) {
+            img {
+                height: 100px;
+            }
+
+            margin-bottom: 10px;
+        }
         
             h3 {
                 margin: 0;
@@ -134,6 +172,12 @@ box-shadow: 0px -70px 20px rgba(0, 0, 0, 0.95);
                     color: $titles;
                     font-weight: 700;
                 }
+                @media (max-width: 680px) {
+                    font-size: 18px;
+                }
+                @media (max-width: 350px) {
+                    font-size: 14px;
+                }
             }
         }
     
@@ -143,6 +187,11 @@ box-shadow: 0px -70px 20px rgba(0, 0, 0, 0.95);
         justify-content: flex-end;
         display: flex;
         align-items: center;
+        @media (max-width: 680px) {
+            img {
+                height: 100px;
+            }
+        }
     
             span {
                 color: $titles;
@@ -160,6 +209,12 @@ box-shadow: 0px -70px 20px rgba(0, 0, 0, 0.95);
                     color: $titles;
                     font-weight: 700;
                 }
+                @media (max-width: 680px) {
+                    font-size: 18px;
+                }
+                @media (max-width: 350px) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -169,6 +224,13 @@ box-shadow: 0px -70px 20px rgba(0, 0, 0, 0.95);
 section {
 display: flex;
 
+.asp {
+    display: flex;
+    width: 100%;
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+}
 
     .left {
         display: flex;
@@ -177,11 +239,18 @@ display: flex;
         width: 50%;
         height: 350px;
         background-color: $secondary;
+        @media (max-width: 700px) {
+            width: 100%;
+        }
 
         .left-text {
             width: 280px;
             margin-right: 150px;
             
+            @media (max-width: 930px) {
+                margin-right: 30px;
+            }
+
             .left-title {
                 font-size: 36px;
                 color: $basetext;
@@ -202,9 +271,19 @@ display: flex;
         width: 50%;
         height: 350px;
         background-color: $titles;
+        @media (max-width: 700px) {
+            width: 100%;
+        }
+        
+        
+
         .right-text {
             width: 280px;
             margin-left: 150px;
+            
+        @media (max-width: 930px) {
+            margin-left: 30px;
+        }
 
             .right-title {
                 font-size: 36px;
@@ -221,6 +300,7 @@ display: flex;
 }
 
 section {
+    display: flex;
 .title {
     font-size: 28px;
     color: $basetext;
@@ -231,11 +311,17 @@ section {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    
     
     .stack1, .stack2 {
         display: flex;
         margin: 0 100px;
+        @media (max-width: 749px) {
+            margin: 10px 0;
+        }
     }
+
 
     .stack1 {
         .stack1-text {
@@ -283,6 +369,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+    }
     
     .linkedin, .git, .email, .wp {
         display: flex;
@@ -294,7 +383,7 @@ section {
         border-radius: 100px;
         background-color: transparent;
         border: 3px solid $titles;
-        transition: 0.6s;
+        
         cursor: pointer;
 
         &:hover {
@@ -349,8 +438,3 @@ footer {
         100% {opacity: 100%;}
     }
 }
-
-
-// RESPONSIVE 
-
-
